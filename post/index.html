@@ -24,21 +24,21 @@
     
 
     
-      <link href="http://example.org/index.xml" rel="alternate" type="application/rss+xml" title="鼎的博客" />
-      <link href="http://example.org/index.xml" rel="feed" type="application/rss+xml" title="鼎的博客" />
+      <link href="http://example.org/post/index.xml" rel="alternate" type="application/rss+xml" title="鼎的博客" />
+      <link href="http://example.org/post/index.xml" rel="feed" type="application/rss+xml" title="鼎的博客" />
     
 
-    <meta property="og:title" content="鼎的博客" />
+    <meta property="og:title" content="Posts" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="http://example.org/" />
+<meta property="og:url" content="http://example.org/post/" />
 
 <meta property="og:updated_time" content="2019-08-17T22:21:10+08:00" />
-<meta itemprop="name" content="鼎的博客">
+<meta itemprop="name" content="Posts">
 <meta itemprop="description" content="">
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="鼎的博客"/>
+<meta name="twitter:title" content="Posts"/>
 <meta name="twitter:description" content=""/>
 
   </head>
@@ -76,7 +76,7 @@
 
       <div class="tc-l pv3 ph3 ph4-ns">
         <h1 class="f2 f-subheadline-l fw2 light-silver mb0 lh-title">
-          鼎的博客
+          Posts
         </h1>
         
       </div>
@@ -86,46 +86,28 @@
 
     <main class="pb7" role="main">
       
-  <article class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy mid-gray">
-    
-  </article>
-  
-  
-  
-  
-  
-  
-  
-    
-    
 
-    <div class="pa3 pa4-ns w-100 w-70-ns center">
+  <article class="pa3 pa4-ns nested-copy-line-height nested-img">
+    <section class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy mid-gray">
       
-       
-          <h1 class="flex-none">
-            Recent Posts
-          </h1>
-        
-
+    </section>
+    <aside class="flex-ns flex-wrap justify-around mt5">
       
-
-      <section class="w-100 mw8">
-        
-        
-          <div class="relative w-100 mb4">
-            
-<article class="bb b--black-10">
-  <div class="db pv4 ph3 ph0-l no-underline dark-gray">
-    <div class="flex flex-column flex-row-ns">
-      
-      <div class="blah w-100">
-        <h1 class="f3 fw1 athelas mt0 lh-title">
-          <a href="/post/%E5%A6%82%E4%BD%95%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" class="color-inherit dim link">
-            如何用hugo搭建个人博客
-            </a>
-        </h1>
-        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
-          如何用Hugo搭建个人网站 下载和安装Hugo Hugo是用Go语言写的，可以直接下载，不需要额外的依赖。
+        <div class="relative w-100 w-30-l mb4 bg-white">
+          
+            <div class="mb3 pa4 mid-gray overflow-hidden">
+    
+      <div class="f6">
+        August 17, 2019
+      </div>
+    
+    <h1 class="f3 near-black">
+      <a href="/post/%E5%A6%82%E4%BD%95%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" class="link black dim">
+        如何用hugo搭建个人博客
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      如何用Hugo搭建个人网站 下载和安装Hugo Hugo是用Go语言写的，可以直接下载，不需要额外的依赖。
 win64x对应的是hugo_x.xx.x_Windows-64bit.zip，下载后创建安装目录，例如D:\Hugo，之下建两个子目录bin和Sites，然后解压，例如解压到D:\Hugo\bin，把解压的hugo_x.xx.x_windows_amd64.exe文件重命名为hugo.exe，然后加到环境变量Path里，方便在命令行里使用。
 添加成功后打开cmd或者PowerShell，运行命令hugo version，如果安装成功，会输出Hugo Static Site Generator vx.xx.x
 搭建个人网站 首先要确定自己要搭建什么网站，我要建的是托管到Github的用户网站，按照Github Pages规则，网站名应该是，所以我第一步创建网站用以下命令：
@@ -135,52 +117,41 @@ cd D:\Hugo\Sites hugo new site brent-li.github.io  之后在Site目录下多了�
 cd xxx.github.io hugo new post/开博大吉.md  Hugo会在content目录下创建post目录，在post目录下创建开博大吉.md文件。之后打开md文件，里面已经有些内容
 --- title: &quot;开博大吉&quot; date: 2019-08-13T14:49:45+08:00 draft: true ---  &mdash;包起来的内容是TOML配置信息，叫作扉页(front matter)，默认这3项，可以再添加一些，其中draft是true时Hugo不会真正发布它，要发布时改成false。修改后的扉页如下：
 --- date = &quot;2017-02-08T22:07:46+08:00&quot; title = &quot;Scala学习笔记之模式匹配&quot; draft = false tags = [&quot;scala&quot;,&quot;pattern matching&quot;,&quot;模式匹配&quot;] share = true ---  然后再把我的博客内容复制进md文件，一篇博客完成了。
-        </div>
-          <a href="/post/%E5%A6%82%E4%BD%95%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
-        
-      </div>
     </div>
   </div>
-</article>
 
-          </div>
-        
-          <div class="relative w-100 mb4">
-            
-<article class="bb b--black-10">
-  <div class="db pv4 ph3 ph0-l no-underline dark-gray">
-    <div class="flex flex-column flex-row-ns">
+        </div>
       
-      <div class="blah w-100">
-        <h1 class="f3 fw1 athelas mt0 lh-title">
-          <a href="/post/%E5%88%B6%E4%BD%9C%E4%B8%80%E4%B8%AA%E5%8F%AF%E4%BB%A5%E7%94%A8%E9%BC%A0%E6%A0%87%E6%8B%96%E5%8A%A8%E7%9A%84div/" class="color-inherit dim link">
-            制作一个可以用鼠标拖动的div
-            </a>
-        </h1>
-        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
-          我的第一个作品（js） 在观看方方老师的教学视频后，制作了一个小作品。在这里记录一些学习内容，以便日后的复习。
+        <div class="relative w-100 w-30-l mb4 bg-white">
+          
+            <div class="mb3 pa4 mid-gray overflow-hidden">
+    
+      <div class="f6">
+        August 13, 2019
+      </div>
+    
+    <h1 class="f3 near-black">
+      <a href="/post/%E5%88%B6%E4%BD%9C%E4%B8%80%E4%B8%AA%E5%8F%AF%E4%BB%A5%E7%94%A8%E9%BC%A0%E6%A0%87%E6%8B%96%E5%8A%A8%E7%9A%84div/" class="link black dim">
+        制作一个可以用鼠标拖动的div
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      我的第一个作品（js） 在观看方方老师的教学视频后，制作了一个小作品。在这里记录一些学习内容，以便日后的复习。
 制作思路 实现的思路是这样的。先用js创建一个div，使用css的绝对定位，使样式中的top和left值发生变化，来实现div位置变化。鼠标拖动可以使用事件监听来实现，在onmousedown，onmousemove，onmouseup的时候实现不同的js代码，来完成鼠标拖动div。遇到bug时候，使用console方法去调试。
 基本工作 在html中引入js 只需
 &lt;script src=&quot;main.js&quot;&gt;&lt;/script&gt;  代码如下
 &lt;!DOCTYPE html&gt; &lt;html lang=&quot;zh&quot;&gt; &lt;head&gt; &lt;meta charset=&quot;UTF-8&quot;&gt; &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt; &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;ie=edge&quot;&gt; &lt;title&gt;我的第一个js应用&lt;/title&gt; &lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot;&gt; &lt;/head&gt; &lt;body&gt; &lt;script src=&quot;main.js&quot;&gt;&lt;/script&gt; &lt;/body&gt; &lt;/html&gt;  在js中创建div 需要在style.css中创建一个基本的div，并引入js中 style.css代码如下
 .demo{ border:1px solid red; height: 100px; width: 100px; position: absolute; top:0; left:0; } body{ margin: 0; height: 100vh; box-sizing: border-box }  在js中引入只需要两条代码。如下
 let div1 = document.createElement('div'); document.body.appendChild(div1); // 并指定 div1.
-        </div>
-          <a href="/post/%E5%88%B6%E4%BD%9C%E4%B8%80%E4%B8%AA%E5%8F%AF%E4%BB%A5%E7%94%A8%E9%BC%A0%E6%A0%87%E6%8B%96%E5%8A%A8%E7%9A%84div/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
-        
-      </div>
     </div>
   </div>
-</article>
 
-          </div>
-        
-      </section>
-
+        </div>
       
+    </aside>
+    
 
-      </div>
-  
+  </article>
 
     </main>
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">

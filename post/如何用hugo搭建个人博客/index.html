@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>鼎的博客  | 如何用hugo搭建个人博客</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="generator" content="Hugo 0.56.3" />
+    
+    
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
+
+    
+    
+      <link href="/dist/css/app.d98f2eb6bcd1eaedb7edf166bd16af26.css" rel="stylesheet">
+    
+
+    
+
+    
+      
+    
+
+    
+
+    <meta property="og:title" content="如何用hugo搭建个人博客" />
+<meta property="og:description" content="如何用Hugo搭建个人网站 下载和安装Hugo Hugo是用Go语言写的，可以直接下载，不需要额外的依赖。
+win64x对应的是hugo_x.xx.x_Windows-64bit.zip，下载后创建安装目录，例如D:\Hugo，之下建两个子目录bin和Sites，然后解压，例如解压到D:\Hugo\bin，把解压的hugo_x.xx.x_windows_amd64.exe文件重命名为hugo.exe，然后加到环境变量Path里，方便在命令行里使用。
+添加成功后打开cmd或者PowerShell，运行命令hugo version，如果安装成功，会输出Hugo Static Site Generator vx.xx.x
+搭建个人网站 首先要确定自己要搭建什么网站，我要建的是托管到Github的用户网站，按照Github Pages规则，网站名应该是，所以我第一步创建网站用以下命令：
+cd D:\Hugo\Sites hugo new site brent-li.github.io  之后在Site目录下多了一个brent-li.github.io文件夹，进入文件夹可以看到目录结构如下：
+|-- archetypes |-- config.toml |-- content |-- data |-- layouts `-- static  archetypes目录里可以放一些原型，用于hugo新建内容的配置属性。config.toml是网站的配置属性文件。content文件夹里放你网站的内容，例如你发布的博客文章。data目录是Hugo使用的配置文件存放的地方。layout目录存放布局内容。static目录存放静态资源如图片、css等。
+接下来我们先在content里放点东西。命令如下：
+cd xxx.github.io hugo new post/开博大吉.md  Hugo会在content目录下创建post目录，在post目录下创建开博大吉.md文件。之后打开md文件，里面已经有些内容
+--- title: &quot;开博大吉&quot; date: 2019-08-13T14:49:45&#43;08:00 draft: true ---  &mdash;包起来的内容是TOML配置信息，叫作扉页(front matter)，默认这3项，可以再添加一些，其中draft是true时Hugo不会真正发布它，要发布时改成false。修改后的扉页如下：
+--- date = &quot;2017-02-08T22:07:46&#43;08:00&quot; title = &quot;Scala学习笔记之模式匹配&quot; draft = false tags = [&quot;scala&quot;,&quot;pattern matching&quot;,&quot;模式匹配&quot;] share = true ---  然后再把我的博客内容复制进md文件，一篇博客完成了。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://example.org/post/%E5%A6%82%E4%BD%95%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" />
+<meta property="article:published_time" content="2019-08-17T22:21:10+08:00" />
+<meta property="article:modified_time" content="2019-08-17T22:21:10+08:00" />
+<meta itemprop="name" content="如何用hugo搭建个人博客">
+<meta itemprop="description" content="如何用Hugo搭建个人网站 下载和安装Hugo Hugo是用Go语言写的，可以直接下载，不需要额外的依赖。
+win64x对应的是hugo_x.xx.x_Windows-64bit.zip，下载后创建安装目录，例如D:\Hugo，之下建两个子目录bin和Sites，然后解压，例如解压到D:\Hugo\bin，把解压的hugo_x.xx.x_windows_amd64.exe文件重命名为hugo.exe，然后加到环境变量Path里，方便在命令行里使用。
+添加成功后打开cmd或者PowerShell，运行命令hugo version，如果安装成功，会输出Hugo Static Site Generator vx.xx.x
+搭建个人网站 首先要确定自己要搭建什么网站，我要建的是托管到Github的用户网站，按照Github Pages规则，网站名应该是，所以我第一步创建网站用以下命令：
+cd D:\Hugo\Sites hugo new site brent-li.github.io  之后在Site目录下多了一个brent-li.github.io文件夹，进入文件夹可以看到目录结构如下：
+|-- archetypes |-- config.toml |-- content |-- data |-- layouts `-- static  archetypes目录里可以放一些原型，用于hugo新建内容的配置属性。config.toml是网站的配置属性文件。content文件夹里放你网站的内容，例如你发布的博客文章。data目录是Hugo使用的配置文件存放的地方。layout目录存放布局内容。static目录存放静态资源如图片、css等。
+接下来我们先在content里放点东西。命令如下：
+cd xxx.github.io hugo new post/开博大吉.md  Hugo会在content目录下创建post目录，在post目录下创建开博大吉.md文件。之后打开md文件，里面已经有些内容
+--- title: &quot;开博大吉&quot; date: 2019-08-13T14:49:45&#43;08:00 draft: true ---  &mdash;包起来的内容是TOML配置信息，叫作扉页(front matter)，默认这3项，可以再添加一些，其中draft是true时Hugo不会真正发布它，要发布时改成false。修改后的扉页如下：
+--- date = &quot;2017-02-08T22:07:46&#43;08:00&quot; title = &quot;Scala学习笔记之模式匹配&quot; draft = false tags = [&quot;scala&quot;,&quot;pattern matching&quot;,&quot;模式匹配&quot;] share = true ---  然后再把我的博客内容复制进md文件，一篇博客完成了。">
+
+
+<meta itemprop="datePublished" content="2019-08-17T22:21:10&#43;08:00" />
+<meta itemprop="dateModified" content="2019-08-17T22:21:10&#43;08:00" />
+<meta itemprop="wordCount" content="100">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="如何用hugo搭建个人博客"/>
+<meta name="twitter:description" content="如何用Hugo搭建个人网站 下载和安装Hugo Hugo是用Go语言写的，可以直接下载，不需要额外的依赖。
+win64x对应的是hugo_x.xx.x_Windows-64bit.zip，下载后创建安装目录，例如D:\Hugo，之下建两个子目录bin和Sites，然后解压，例如解压到D:\Hugo\bin，把解压的hugo_x.xx.x_windows_amd64.exe文件重命名为hugo.exe，然后加到环境变量Path里，方便在命令行里使用。
+添加成功后打开cmd或者PowerShell，运行命令hugo version，如果安装成功，会输出Hugo Static Site Generator vx.xx.x
+搭建个人网站 首先要确定自己要搭建什么网站，我要建的是托管到Github的用户网站，按照Github Pages规则，网站名应该是，所以我第一步创建网站用以下命令：
+cd D:\Hugo\Sites hugo new site brent-li.github.io  之后在Site目录下多了一个brent-li.github.io文件夹，进入文件夹可以看到目录结构如下：
+|-- archetypes |-- config.toml |-- content |-- data |-- layouts `-- static  archetypes目录里可以放一些原型，用于hugo新建内容的配置属性。config.toml是网站的配置属性文件。content文件夹里放你网站的内容，例如你发布的博客文章。data目录是Hugo使用的配置文件存放的地方。layout目录存放布局内容。static目录存放静态资源如图片、css等。
+接下来我们先在content里放点东西。命令如下：
+cd xxx.github.io hugo new post/开博大吉.md  Hugo会在content目录下创建post目录，在post目录下创建开博大吉.md文件。之后打开md文件，里面已经有些内容
+--- title: &quot;开博大吉&quot; date: 2019-08-13T14:49:45&#43;08:00 draft: true ---  &mdash;包起来的内容是TOML配置信息，叫作扉页(front matter)，默认这3项，可以再添加一些，其中draft是true时Hugo不会真正发布它，要发布时改成false。修改后的扉页如下：
+--- date = &quot;2017-02-08T22:07:46&#43;08:00&quot; title = &quot;Scala学习笔记之模式匹配&quot; draft = false tags = [&quot;scala&quot;,&quot;pattern matching&quot;,&quot;模式匹配&quot;] share = true ---  然后再把我的博客内容复制进md文件，一篇博客完成了。"/>
+
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="http://example.org/" class="f3 fw2 hover-white no-underline white-90 dib">
+      鼎的博客
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+
+    <header class="mt4 w-100">
+      <p class="f6 b helvetica tracked">
+          
+        POSTS
+      </p>
+      <h1 class="f1 athelas mb1">如何用hugo搭建个人博客</h1>
+      
+      <time class="f6 mv4 dib tracked" datetime="2019-08-17T22:21:10&#43;08:00">August 17, 2019</time>
+      
+      
+    </header>
+
+    <section class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l">
+
+<h1 id="如何用hugo搭建个人网站">如何用Hugo搭建个人网站</h1>
+
+<h2 id="下载和安装hugo">下载和安装Hugo</h2>
+
+<p>Hugo是用Go语言写的，可以直接下载，不需要额外的依赖。</p>
+
+<p>win64x对应的是hugo_x.xx.x_Windows-64bit.zip，下载后创建安装目录，例如D:\Hugo，之下建两个子目录bin和Sites，然后解压，例如解压到D:\Hugo\bin，把解压的hugo_x.xx.x_windows_amd64.exe文件重命名为hugo.exe，然后加到环境变量Path里，方便在命令行里使用。</p>
+
+<p>添加成功后打开cmd或者PowerShell，运行命令hugo version，如果安装成功，会输出Hugo Static Site Generator vx.xx.x</p>
+
+<h2 id="搭建个人网站">搭建个人网站</h2>
+
+<p>首先要确定自己要搭建什么网站，我要建的是托管到Github的用户网站，按照Github Pages规则，网站名应该是<username.github.io>，所以我第一步创建网站用以下命令：</p>
+
+<pre><code>cd D:\Hugo\Sites
+hugo new site brent-li.github.io
+</code></pre>
+
+<p>之后在Site目录下多了一个brent-li.github.io文件夹，进入文件夹可以看到目录结构如下：</p>
+
+<pre><code>|-- archetypes
+|-- config.toml
+|-- content
+|-- data
+|-- layouts
+`-- static
+</code></pre>
+
+<p>archetypes目录里可以放一些原型，用于hugo新建内容的配置属性。config.toml是网站的配置属性文件。content文件夹里放你网站的内容，例如你发布的博客文章。data目录是Hugo使用的配置文件存放的地方。layout目录存放布局内容。static目录存放静态资源如图片、css等。</p>
+
+<p>接下来我们先在content里放点东西。命令如下：</p>
+
+<pre><code>cd xxx.github.io
+hugo new post/开博大吉.md
+</code></pre>
+
+<p>Hugo会在content目录下创建post目录，在post目录下创建开博大吉.md文件。之后打开md文件，里面已经有些内容</p>
+
+<pre><code>---
+title: &quot;开博大吉&quot;
+date: 2019-08-13T14:49:45+08:00
+draft: true
+---
+</code></pre>
+
+<p>&mdash;包起来的内容是TOML配置信息，叫作扉页(front matter)，默认这3项，可以再添加一些，其中draft是true时Hugo不会真正发布它，要发布时改成false。修改后的扉页如下：</p>
+
+<pre><code>---
+date = &quot;2017-02-08T22:07:46+08:00&quot;
+title = &quot;Scala学习笔记之模式匹配&quot;
+draft = false
+tags = [&quot;scala&quot;,&quot;pattern matching&quot;,&quot;模式匹配&quot;]
+share = true
+---
+</code></pre>
+
+<p>然后再把我的博客内容复制进md文件，一篇博客完成了。</p>
+
+<h2 id="本地测试">本地测试</h2>
+
+<p>Hugo自带服务器，可以用命令行启动：</p>
+
+<pre><code>hugo server -D 
+</code></pre>
+
+<p>服务器启动后访问<a href="http://localhost:1313访问网站，发现问题可以及时修改。">http://localhost:1313访问网站，发现问题可以及时修改。</a></p>
+
+<h2 id="发布到github">发布到github</h2>
+
+<p>本地测试网站没有问题后，就可以准备发布了。执行以下命令</p>
+
+<p>hugo -t casper
+Hugo将编译所有文件并输出到public目录，你需要在github上创建repository，名字就是&lt;你的用户名&gt;.github.io，创建完后，返回你本地命令行，进入public目录，执行以下命令：</p>
+
+<p>git init
+git add .
+git commit -v
+<!-- 这条在github上创建新文件时直接复制 -->
+git remote add origin git@github.com:xxx.github.io.git
+git push -u origin master
+稍等片刻后，打开&lt;你的用户名&gt;.github.io网址，就可以看到你的个人网站了。</p>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6">
+      
+      
+      </div>
+    </section>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://example.org/" >
+    &copy; 2019 鼎的博客
+  </a>
+    <div>
+
+
+
+
+
+
+
+
+
+
+</div>
+  </div>
+</footer>
+
+    
+
+  <script src="/dist/js/app.3fc0f988d21662902933.js"></script>
+
+
+  </body>
+</html>
